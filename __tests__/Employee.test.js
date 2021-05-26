@@ -3,7 +3,6 @@ const Employee = require('../lib/Employee');
 
 // Constructor
 // ===========================================================
-
 test('creates an employee object', () => {
     const employee = new Employee('Dave');
 
@@ -12,6 +11,15 @@ test('creates an employee object', () => {
     expect(employee.email).toBe('dave@fakemail.com');
 })
 
+test('unique id on creation', () => {
+    const employee = new Employee('Traci');
+    const employee2 = new Employee('Glen');
+
+    expect(employee.id).not.toEqual(employee2.id);
+})
+
+// Methods
+// ===========================================================
 test('getName()', () => {
     const employee = new Employee('Joel');
 
