@@ -4,42 +4,35 @@ const Employee = require('../lib/Employee');
 // Constructor
 // ===========================================================
 test('creates an employee object', () => {
-    const employee = new Employee('Dave');
+    const employee = new Employee(12, 'Dave', 'dave@email');
 
     expect(employee.name).toBe('Dave');
-    expect(employee.id).toEqual(expect.any(Number));
-    expect(employee.email).toBe('dave@fakemail.com');
-})
-
-test('unique id on creation', () => {
-    const employee = new Employee('Traci');
-    const employee2 = new Employee('Glen');
-
-    expect(employee.id).not.toEqual(employee2.id);
+    expect(employee.id).toEqual(12);
+    expect(employee.email).toBe('dave@email');
 })
 
 // Methods
 // ===========================================================
 test('getName()', () => {
-    const employee = new Employee('Joel');
+    const employee = new Employee(50, 'Joel', 'joel@email');
 
     expect(employee.getName()).toBe('Joel');
 })
 
 test('getId()', () => {
-    const employee = new Employee('Henrey');
+    const employee = new Employee(73, 'Henry', 'h-dog');
 
     expect(employee.getId()).toEqual(expect.any(Number));
 })
 
 test('getEmail()', () => {
-    const employee = new Employee('Dave');
+    const employee = new Employee(75, 'john', 'John@email');
 
-    expect(employee.getEmail()).toBe('dave@fakemail.com');
+    expect(employee.getEmail()).toBe('John@email');
 })
 
 test('getRole()', () => {
-    const employee = new Employee('Josephine');
+    const employee = new Employee(30, 'Josephine', 'luckyJo-Jo@email');
 
     expect(employee.getRole()).toBe('Employee');
 })
