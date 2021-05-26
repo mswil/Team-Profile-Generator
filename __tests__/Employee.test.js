@@ -23,3 +23,9 @@ test('getId()', () => {
 
     expect(employee.getId()).toEqual(expect.any(Number));
 })
+
+test('getEmail()', () => {
+    const employee = new Employee('Dave');
+
+    expect(employee.getEmail()).toBe('dave@fakemail.com');
+})
