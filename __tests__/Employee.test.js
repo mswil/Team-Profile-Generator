@@ -12,3 +12,9 @@ test('creates an employee object', () => {
     expect(employee.email).toBe('dave@fakemail.com');
 })
 
+test('getName()', () => {
+    const employee = new Employee('Joel');
+
+    expect(employee.getName()).toBe('Joel');
+})
+
