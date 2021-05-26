@@ -18,3 +18,8 @@ test('getName()', () => {
     expect(employee.getName()).toBe('Joel');
 })
 
+test('getId()', () => {
+    const employee = new Employee('Henrey');
+
+    expect(employee.getId()).toEqual(expect.any(Number));
+})
