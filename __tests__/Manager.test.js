@@ -15,7 +15,7 @@ test('create manager object', () => {
 
 // Methods
 // ===========================================================
-test('overide getRole()', () => {
+test('override getRole()', () => {
     const manager = new Manager(44, 'Staci', 'staci@email');
 
     expect(manager.getRole()).toBe('Manager');
