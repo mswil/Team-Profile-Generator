@@ -13,8 +13,6 @@ Make sure you have node.js installed on your device. Then run `npm install`,`npm
 4. Fill out prompts
 5. Your team webpage will be generated in the dist folder upon completion of prompts
 
-![README-Generator.gif](README-Generator.gif)
-
 ## Demo
 ![Walkthrough.gif](Walkthrough.gif)
 
