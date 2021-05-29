@@ -4,6 +4,9 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
+const generatePage = require('./src/page-template');
+const { writeFile, copyFile } = require('./utils/generate-site');
+
 const employees = [];
 
 const promptForEmployeeData = [
@@ -159,4 +162,18 @@ Let's start with the manager.`);
 
 createManager()
     .then(addEmployees)
+    .then( () => {
+        return generatePage(employees)
+    })
+    .then(writeFile)
+    .then(writeFileResponse => {
+        console.log(writeFileResponse);
+        return copyFile()
+    })
+    .then(copyFileResponse => {
+        console.log(copyFileResponse);
+    })
+    .catch(err => {
+        console.error(err);
+    })
     
