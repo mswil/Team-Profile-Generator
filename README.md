@@ -3,7 +3,7 @@
 Team-Profile-Generator is an exercise in utilizing Object Oriented Coding and Test Driven Design to help proceduralize creating a team of employees who have varying roles
 
 ## Installation
-Make sure you have node.js installed on your device. Then run `npm install`,`npm install inquirer`, and `npm install jest`. Then go into the package.json and change the value of test to `"jest"`
+Make sure you have node.js installed on your device. Then run `npm install`.
 
 ## Usage
 
